@@ -5,4 +5,8 @@
 }
 body{
   font-family: "Big Shoulders Inline", sans-serif;
+  background-image: url(/assets/images/bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
