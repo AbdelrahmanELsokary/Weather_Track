@@ -1,5 +1,14 @@
-export function Home({ data }) {
-  if (!data || !data.location || !data.current) {
+export function Home({ loading, data }) {
+  if (loading) {
+    return (
+      <>
+        <div className="container py-20 flex flex-col justify-center items-center">
+          <h1 className="text-3xl text-white">Loading...</h1>
+          <div className="w-16 h-16 border-4 border-yellow-300 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      </>
+    );
+  } else if (!data || !data.location || !data.current) {
     return (
       <>
         <section>
@@ -16,7 +25,7 @@ export function Home({ data }) {
     return (
       <>
         <section>
-          <div className="container flex items-center justify-around backdrop-blur-3xl w-[60%] p-8 pl-0 m-auto mt-20 rounded-3xl text-white">
+          <div className="container flex flex-wrap items-center justify-around backdrop-blur-3xl w-[60%] p-8 m-auto mt-20 rounded-3xl text-white">
             <div className="col_1">
               <h2 className=" flex items-center justify-center font-bold text-4xl">
                 Weather Details Today <img src={data.current.condition.icon} />
