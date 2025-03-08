@@ -16,7 +16,7 @@ export function Home({ loading, data }) {
             <h1 className="text-center text-5xl text-white font-black">
               Welcome To Weather Track <br /> <span className="block font-normal py-6">Enter a City Name</span>
             </h1>
-            <img src="/public/assets/images/cloud&sun.webp" alt="cloud&sun image" className="w-52 m-auto" />
+            <img src="/assets/images/cloud&sun.webp" alt="cloud&sun image" className="w-52 m-auto" />
           </div>
         </section>
       </>
